@@ -24,7 +24,7 @@ def calculate(request):
             form.save()
             return redirect('calc')
 
-    return render(request, template_name='histtory/form.html', context={'form': form})
+    return render(request, template_name='histtory/index.html', context={'form': form})
 def history_objects(request):
     storage = Calc_History.objects.all()
     return render(request, "histtory/obj.html", context={'storage':storage})
