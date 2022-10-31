@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Project</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'histtory/css/index.css' %}">
+</head>
+<body>
+    <div class="links">
+            <a href="/vivod">Operations history</a>
+        </div>
+    <div class="wrap">
+        <form action={% url 'calc' %} method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
